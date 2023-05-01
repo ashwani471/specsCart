@@ -9,7 +9,7 @@ function showEffects(){
        div.classList.remove('hidden');
        
        div.classList.add('frame-4');
-       span1.clasList.add('visible');
+       span1.classList.add('visible');
     },600);
 
     setTimeout(()=>{
@@ -32,3 +32,24 @@ function showEffects(){
 }
 
 let free_coating = document.getElementById('free-coating');
+console.log(free_coating);
+
+let free_coating_expand = document.getElementById('free-coating-expand');
+console.log(free_coating_expand);
+
+free_coating.addEventListener('click',expandFreeCoating);
+
+function expandFreeCoating(){
+    free_coating_expand.classList.remove('display-none');
+    // free_coating_expand.classList.add('display-block');
+    // console.log(free_coating_expand);
+    free_coating.classList.add('display-none');
+}
+
+free_coating_expand.addEventListener('click',removeFreeCoatingExpand);
+
+function removeFreeCoatingExpand(){
+    free_coating.classList.remove('display-none');
+    free_coating_expand.classList.add('display-none');
+    // free_coating.classList.add('display-block');
+}
